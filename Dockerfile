@@ -1,4 +1,4 @@
-FROM           ubuntu:trusty
+FROM           onlinelabs/ubuntu:trusty
 MAINTAINER     Jeff Lindsay <progrium@gmail.com>
 
 ENV            BR_VERSION 2014.02
@@ -11,7 +11,7 @@ RUN            DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get insta
                     bc \
                     gnupg \
                     python \
-                    libc6-i386 \
+                    libc6-armel \
                     language-pack-en-base
 WORKDIR        /tmp
 RUN            wget -nv http://buildroot.uclibc.org/downloads/buildroot-$BR_VERSION.tar.gz
